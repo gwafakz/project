@@ -1,0 +1,11 @@
+{% extends "onlineshop/base.html" %}
+
+{% block title %}
+    Order Success
+{% endblock %}
+
+{% block content %}
+    <h1>Thank you for your order!</h1>
+    <p>Your order has been successfully placed. You will receive a confirmation email shortly.</p>
+    <a href="{% url 'onlineshop:product_list' %}">Continue Shopping</a>
+{% endblock %}

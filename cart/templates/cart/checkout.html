@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Checkout</h2>
+
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}! You can proceed with your order.</p>
+    <a href="{% url 'cart:order_success' %}">Place Order</a>
+{% else %}
+    <p>You need to <a href="{% url 'onlineshop:login' %}">log in</a> to continue checkout.</p>
+{% endif %}
+
+{% endblock %}
